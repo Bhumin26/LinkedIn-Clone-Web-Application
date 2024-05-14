@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LinkedIn Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo"><img src="images/logo.png"></a>
+
+            <div class="search-box">
+                <img src="images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+
+        </div>
+
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#" class="active-link"><img src="images/home.png"><span>Home</span> </a></li>
+                <li><a href="#"><img src="images/network.png"><span>My Network</span> </a></li>
+                <li><a href="#"><img src="images/jobs.png"><span>Jobs</span> </a></li>
+                <li><a href="#"><img src="images/message.png"><span>Messaging</span> </a></li>
+                <li><a href="#"><img src="images/notification.png"><span>Notification</span> </a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="online">
+                <img src="images/user-1.png" class="nav-profile-image" onclick="toggleMenu()">
+            </div>
+        </div>
+
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="images/user-1.png">
+                    <div>
+                        <h3>Bhumin Pathak</h3>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/setting.png">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/display.png">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="profile-main">
+            <div class="profile-container">
+                <img src="images/cover-pic.png" width="100%">
+                <div class="profile-container-inner">
+                    <img src="images/user-1.png" class="profile-pic">
+                    <h1>Bhumin Pathak</h1>
+                    <b>Full-Stack Developer</b>
+                    <p>Pune, Maharashtra &middot; <a href="#">Contact Info</a></p>
+
+                    <div class="mutual-connection">
+                        <img src="images/user-2.png">
+                        <span>2 mutual connection: Ram</span>
+                    </div>
+
+                    <div class="profile-btn">
+                        <a href="#" class="primary-btn"><img src="images/connect.png">Connect</a>
+                        <a href="#"><img src="images/chat.png">Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-description">
+            <h2>About</h2>
+            <p>🚀 Full Stack Developer | Passionate about Crafting Digital Solutions 🌟Experienced and innovative
+                Full Stack Developer.</p>
+            <a href="#" class="see-more-link">See more...</a>
+        </div>
+
+        <div class="profile-description">
+            <h2>Experience</h2>
+            <div class="profile-desc-row">
+                <img src="images/microsoft.png">
+                <div>
+                    <h3>Lead Front-End Developer</h3>
+                    <b>Cloud Counselage Pvt.</b>
+                    <b>Jan-2024 - Present &middot; 3 months</b>
+                    <hr>
+                </div>
+            </div>
+            <a href="#" class="experience-link">Show experience<img src="images/right-arrow.png"></a>
+        </div>
+        <div class="profile-description-edu">
+            <h2>Education</h2>
+            <div class="profile-desc-row">
+                <img src="images/stanford.png">
+                <div>
+                    <h3>Symbiosis Institute of Technology</h3>
+                    <b>B.Tech Information Technology</b>
+                    <b>2021-2024</b>
+                    <hr>
+                </div>
+            </div>
+            <div class="profile-desc-row">
+                <img src="images/north.png">
+                <div>
+                    <h3>R.N.G.P.I.T. Institute of Technology</h3>
+                    <b>Diploma Computer Science Engineering</b>
+                    <b>2018-2021</b>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-description-skl">
+            <h2>Skills</h2>
+            <a href="#" class="skills-btn">HTML</a>
+            <a href="#" class="skills-btn">CSS</a>
+            <a href="#" class="skills-btn">JavaScript</a>
+            <a href="#" class="skills-btn">Web Design</a>
+            <a href="#" class="skills-btn">SQL</a>
+            <a href="#" class="skills-btn">Business Intelligence</a>
+            <a href="#" class="skills-btn">Leadership</a>
+        </div>
+
+        <div class="profile-description-lan">
+            <h2>Language</h2>
+            <a href="#" class="language-btn">English</a>
+            <a href="#" class="language-btn">Hindi</a>
+            <a href="#" class="language-btn">Gujarati</a>
+        </div>
+
+    </div>
+
+    <div class="right-sidebar">
+        <div class="sidebar-add">
+            <small>Ad &middot; &middot;</small>
+            <p>Master the 6 Principles of Web Development </p>
+            <div>
+                <img src="images/user-1.png">
+                <img src="images/mi-logo.png">
+            </div>
+            <b>Brand and Demand in Xiaomi</b>
+            <a href="#" class="add-link">Learn More</a>
+        </div>
+
+        <div class="sidebar-people">
+            <h3>People you may know</h3>
+            <div class="sidebar-people-row">
+                <img src="images/user-5.png">
+                <div>
+                    <h3>Jaydeep Rohit</h3>
+                    <p>Head of Greens Solution.</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+            <div class="sidebar-people-row">
+                <img src="images/user-3.png">
+                <div>
+                    <h3>Krishi Pathak</h3>
+                    <p>Head of Global-IT Tech.</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+
+            <div class="sidebar-people-row">
+                <img src="images/user-4.png">
+                <div>
+                    <h3>Natasha Patel</h3>
+                    <p>Student at N.G.P.P.</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+
+            <div class="sidebar-people-row">
+                <img src="images/user-2.png">
+                <div>
+                    <h3>Dhruv Dhariya</h3>
+                    <p>Student at SIT.</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+            <div class="sidebar-people-row">
+                <img src="images/user-1.png">
+                <div>
+                    <h3>Roni Roy</h3>
+                    <p>Student at D.Y. Patil</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+
+            <div class="sidebar-people-row">
+                <img src="images/user-5.png">
+                <div>
+                    <h3>Divyansh</h3>
+                    <p>Intern at Cloud Counselage.</p>
+                    <a href="#">Connect</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-footer">
+        <div class="sidebar-useful-links">
+            <a href="#">About</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Advertising</a>
+            <a href="#">More</a>
+            <div class="copyright-msg">
+                <img src="images/logo.png">
+                <p>LinkedIn &#169; 2024. All rights reserved</p>
+            </div>
+        </div>
+
+        <div class="sidebar-updates">
+            <img src="images/more.png" class="info-icon">
+            <h3>Updates</h3>
+            <a href="#">Devin AI will not take software Eng. jobs</a>
+            <span>3d ago &middot; 10,500 reader</span>
+            <a href="#">Microsoft windows 12 Launching</a>
+            <span>10h ago &middot; 9,320 reader</span>
+            <a href="#">Study Abroad Germany, UK and many more places.</a>
+            <span>4d ago &middot; 11,238 reader</span>
+            <a href="#">Ratan Tata will take over all Industry ?</a>
+            <span>3h ago &middot; 5,764 reader</span>
+            <a href="#">High Demand Skilled in year 2024 !!</a>
+            <span>3d ago &middot; 10,500 reader</span>
+            <a href="#">Narendra Modi is Powerful Prime Minister</a>
+            <span>3d ago &middot; 10,500 reader</span>
+            <a href="#">Which team will take CUP of IPL 2024 ?</a>
+            <span>3d ago &middot; 10,500 reader</span>
+            <a href="#">ChatGPT vs Google Bard Which is better ?</a>
+            <span>3d ago &middot; 10,500 reader</span>
+            <a href="#" class="read-more-link">Read More</a>
+        </div>
+    </div>
+
+    <script>
+        let profileMenu = document.getElementById("profileMenu");
+        function toggleMenu() {
+            profileMenu.classList.toggle("open-menu");
+        }
+    </script>
+
+</body>
+
+</html>
