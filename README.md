@@ -1,6 +1,6 @@
 # LinkedIn Clone Web Application
 
-This is a web application that aims to replicate the core features and functionality of the popular professional networking platform, LinkedIn. It is built using HTML, CSS, and JavaScript.
+This is a web application that aims to replicate the core features and functionality of the popular professional networking platform, LinkedIn. It is built using HTML, CSS, and PHP.
 
 ## Features
 
