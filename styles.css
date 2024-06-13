@@ -6,24 +6,28 @@
 }
 
 body {
-    background: linear-gradient(90deg, rgb(0, 226, 242) 0%, rgb(255, 240, 165) 100%);
+    background: url('../LinkedIn-Clone-Web/background-image.png') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
+
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
+    
 }
 
-#loginForm {
+form {
     background: linear-gradient(90deg, rgb(217, 178, 252) 0%, rgb(255, 255, 255) 100%);
     padding: 20px;
     border-radius: 10px;
@@ -62,6 +66,9 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
     border-color: #0073b1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 177, 0.5);
+    
 }
 
 button {
@@ -79,19 +86,13 @@ button:hover {
     background-color: #005f91;
 }
 
-#passwordStrength {
-    display: block;
-    margin-top: 5px;
+#error-message {
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    
 }
 
 /*------end of login------*/
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 #signupForm {
     background-color: #fff;
@@ -103,23 +104,23 @@ button:hover {
     width: 100%;
 }
 
-h2 {
+#signupForm h2 {
     margin-bottom: 20px;
     color: #0073b1;
 }
 
-.input-group {
+#signupForm .input-group {
     margin-bottom: 20px;
 }
 
-label {
+#signupForm label {
     display: block;
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"] {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
@@ -128,13 +129,16 @@ input[type="password"] {
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
+#signupForm input[type="text"]:focus,
+#signupForm input[type="email"]:focus,
+#signupForm input[type="password"]:focus {
     border-color: #0073b1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 177, 0.5);
+    
 }
 
-button {
+#signupForm button {
     width: 100%;
     padding: 12px;
     background-color: #0073b1;
@@ -145,7 +149,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+#signupForm button:hover {
     background-color: #005f91;
 }
 

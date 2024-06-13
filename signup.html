@@ -4,48 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
+        <h2>Signup</h2>
+        <div id="signup-error-message" style="color: white;"></div>
         <form id="signupForm">
-            <h2>Sign Up</h2>
-            <div class="input-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" required>
-            </div>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                <small id="passwordStrength"></small> <!-- Display password strength feedback -->
-            </div>
-            <button type="submit">Sign Up</button>
-            <p>Already have an account? <a href="login.html">Login</a></p> <!-- Link to login page -->
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Signup</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
         </form>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        document.getElementById("password").addEventListener("input", function () {
-            var password = this.value;
-            var strengthBadge = document.getElementById("passwordStrength");
-
-            // Default style
-            strengthBadge.style.display = "block";
-            strengthBadge.style.color = "#333";
-
-            // Check password strength
-            if (password.length < 8) {
-                strengthBadge.innerHTML = "Password too weak";
-                strengthBadge.style.color = "red";
-            } else {
-                strengthBadge.innerHTML = "Password strength: Strong";
-                strengthBadge.style.color = "green";
-            }
+        $(document).ready(function() {
+            $('#signupForm').submit(function(event) {
+                event.preventDefault();
+                var formData = $(this).serialize(); 
+                $.ajax({
+                    type: 'POST',
+                    url: 'connect.php',
+                    data: formData,
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            window.location.href = 'login.html';
+                        } else {
+                            $('#signup-error-message').text(response.message);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $('#signup-error-message').text('An error occurred during signup: ' + xhr.responseText);
+                    }
+                });
+            });
         });
     </script>
 </body>

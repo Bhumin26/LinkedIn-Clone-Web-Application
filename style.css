@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, rgb(0, 226, 242) 0%, rgb(255, 240, 165) 100%);
+    background: linear-gradient(90deg, rgb(0, 21, 215) 0%, rgb(168, 232, 255) 100%);
     color: aliceblue;
 }
 
@@ -383,15 +383,15 @@ a {
 .create-post-input {
     padding: 20px 25px 10px;
     display: flex;
-    
-    
+
+
 }
 
 .create-post-input img {
     width: 35px;
     border-radius: 50%;
     margin-right: 10px;
-    
+
 }
 
 .create-post-input textarea {
@@ -401,7 +401,7 @@ a {
     resize: none;
     background: transparent;
     margin-top: 8px;
-    
+
 }
 
 ::placeholder {
@@ -411,7 +411,7 @@ a {
 .create-post-links {
 
     flex-direction: row;
-    
+
 }
 
 .create-post-links li {
@@ -521,6 +521,7 @@ a {
     display: flex;
     align-items: center;
 }
+
 .post-stats img {
     width: 15px;
     margin-right: -5px;
@@ -680,7 +681,7 @@ a {
 .profile-container p a {
     color: #045be6;
     font-weight: 500;
-    
+
 }
 
 .mutual-connection {
@@ -722,18 +723,18 @@ a {
 }
 
 .profile-description {
-        
-        background: #fff;
-        color: #000000;
-        margin: 20px 0 16px -10px;
-        margin-right: 35%;
-        padding: 1% 3% 2%;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        position: relative;
+
+    background: #fff;
+    color: #000000;
+    margin: 20px 0 16px -10px;
+    margin-right: 35%;
+    padding: 1% 3% 2%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
- 
+
 
 
 .profile-description h2 {
@@ -815,8 +816,8 @@ a {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    max-width: 600px; 
-    margin-right: 75px;
+    max-width: 600px;
+    margin-right: 89px;
 }
 
 .profile-description-edu h2 {
@@ -837,7 +838,7 @@ a {
 .profile-description-skl {
     background: #fff;
     color: #000;
-    margin: 50px 20px  36px -10px;
+    margin: 50px 20px 36px -10px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -983,6 +984,7 @@ a {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
+
 .sidebar-people-row a:hover {
     background-color: #2974f4;
     color: #fff;
@@ -995,9 +997,9 @@ a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 1250px;
-    right: 90px;
+    right: 46px;
     border-radius: 5px;
-    
+
 }
 
 .sidebar-updates h3 {
@@ -1013,13 +1015,16 @@ a {
     color: #333;
     transition: color 0.3s ease;
 }
+
 .sidebar-updates a:hover {
     color: #0000fc;
 }
+
 .sidebar-updates span {
     color: #2335ff;
     font-size: 14px;
 }
+
 .read-more-link {
     display: inline-block;
     margin-top: 15px;
@@ -1028,19 +1033,22 @@ a {
     font-weight: 500;
     transition: color 0.3s ease;
 }
+
 .read-more-link:hover {
     color: #1000eb;
 }
+
 .sidebar-useful-linksA {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position:relative;
+    position: relative;
     top: 126px;
     text-align: center;
 
 }
+
 .sidebar-useful-linksA a {
     display: inline-block;
     margin: 5px;

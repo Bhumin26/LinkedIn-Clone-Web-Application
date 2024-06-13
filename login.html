@@ -10,48 +10,46 @@
 
 <body>
     <div class="container">
+        <h2>Login</h2>
+        <div id="error-message"></div>
         <form id="loginForm">
-            <h2>Login</h2>
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                <small id="passwordStrength"></small> <!-- Display password strength feedback -->
-            </div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
             <button type="submit">Login</button>
-            <p>Don't have an account? <a href="signup.html">Sign Up</a></p> 
+            <p>Don't have an account? <a href="signup.html">Signup</a></p>
         </form>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        document.getElementById("loginForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form submission
+        $(document).ready(function() {
+            $('#loginForm').submit(function(event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
 
-            // Perform login validation here
-            // For demonstration purposes, let's assume login is successful
-            // Redirect to index.html after login
-            window.location.href = "index.html";
-        });
 
-        // Password strength check function
-        document.getElementById("password").addEventListener("input", function () {
-            var password = this.value;
-            var strengthBadge = document.getElementById("passwordStrength");
+                $.ajax({
+                    type: 'POST',
+                    url: 'login.php',
+                    data: formData,
+                    dataType: 'json',
+                    success: function(response) {
 
-            // Default style
-            strengthBadge.style.display = "block";
-            strengthBadge.style.color = "#333";
+                        if (response.status === 'success') {
 
-            // Check password strength
-            if (password.length < 8) {
-                strengthBadge.innerHTML = "Password too weak";
-                strengthBadge.style.color = "red";
-            } else {
-                strengthBadge.innerHTML = "Password strength: Strong";
-                strengthBadge.style.color = "green";
-            }
+                            window.location.href = 'index.html';
+                        } else {
+
+                            $('#error-message').text(response.message);
+                        }
+                    },
+                    error: function() {
+                        $('#error-message').text('An error occurred during login.');
+                    }
+                });
+            });
         });
     </script>
 </body>
